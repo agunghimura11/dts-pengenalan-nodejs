@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-fs.open('myText2.tst', 'w', (err, file) => {
+fs.open('myText2.txt', 'w', (err, file) => { // contoh untuk write file myText 
     if(err) {
         return console.error(err)
     }

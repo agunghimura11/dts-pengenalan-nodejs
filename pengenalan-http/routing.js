@@ -1,9 +1,9 @@
 const { S_IWGRP } = require('constants')
 const http = require('http')
 
-const server = http.createServer(function(req, res) {
+const server = http.createServer(function(req, res) { // handling route menggunakan node js
    res.writeHead(200, { 'Content-Type': 'text/html' })
-   switch (req.url) {
+   switch (req.url) { // akan menampilkan halaman yang berbeda sesuai dengan route
        case '/about': 
             res.write('Ini adalah halaman about')
             break

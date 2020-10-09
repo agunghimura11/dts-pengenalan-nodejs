@@ -1,10 +1,10 @@
 const http = require('http')
 const fs = require('fs')
 
-http.createServer((req,res) => {
+http.createServer((req,res) => { // menggunakan modul fs untuk read file sebagai contoh file html
     fs.readFile('index.html',function(err,data){
         res.writeHead(200, { 'Content-Type': 'text/html' })
-        if(err) {
+        if(err) { // handling error
             console.error(err)
             res.write('Terjadi kesalahan pada server')
             res.end()
@@ -13,7 +13,7 @@ http.createServer((req,res) => {
 
         // kirim response
         res.write(data)
-        res.end()
+        res.end() // menutup request
     })
 }).listen(8000)
 
